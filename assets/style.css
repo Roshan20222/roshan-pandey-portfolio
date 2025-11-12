@@ -1,0 +1,28 @@
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  background: #fafafa;
+  color: #222;
+}
+header {
+  text-align: center;
+  margin-top: 2em;
+}
+nav a {
+  margin: 0 8px;
+  color: #1366D6;
+  text-decoration: none;
+}
+section {
+  margin: 2em 0;
+}
+h2 {
+  color: #2b6cb0;
+  border-bottom: 1px solid #EEE;
+}
+footer {
+  text-align: center;
+  margin: 2em 0 1em 0;
+  color: #888;
+}
