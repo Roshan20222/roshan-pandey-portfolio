@@ -1,0 +1,166 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fafafa;
+}
+
+/* Two-column layout */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: white;
+    padding: 2rem;
+    border-right: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.affiliation {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.social-links a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #1366D6;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.social-links a:hover {
+    background: #f0f0f0;
+}
+
+/* Main content */
+.content {
+    flex: 1;
+    padding: 2rem 3rem;
+    max-width: 800px;
+}
+
+.content section {
+    margin-bottom: 2.5rem;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.content ul li::before {
+    content: "• ";
+    color: #1366D6;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.content a {
+    color: #1366D6;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+.project {
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .content {
+        padding: 1.5rem;
+    }
+}
