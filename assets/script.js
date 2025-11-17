@@ -86,4 +86,39 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollSpyObserver.observe(section);
     });
 
+    // "Back to Top" button functionality
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // "Copy to Clipboard" for email
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    const emailAddress = document.getElementById('emailAddress').textContent;
+
+    copyEmailBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(emailAddress).then(() => {
+            // Provide user feedback
+            copyEmailBtn.textContent = '✅';
+            setTimeout(() => {
+                copyEmailBtn.textContent = '📋';
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy email: ', err);
+            // Fallback for older browsers could be added here
+        });
+    });
+
 });
